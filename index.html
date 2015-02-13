@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Track By ng-repeat demo</title>
+
+   
+    <script type="text/javascript" src="angular.js"></script>
+   
+    <script type="text/javascript" src="javascript.js"></script>
+    
+</head>
+
+<body ng-app="myApp">
+	<div ng-controller="mycontroller">
+			<h1>With out track by </h1>
+			<ul>
+				<li ng-repeat="person in persons" console-output="{{$index}} person" ng-bind="person.name"></li>
+				<input type="button" value="Insert" ng-click="rebulidPersons()"/>
+				
+			</ul>
+			<hr/>
+			<h1>With  track by </h1>
+			<ul>
+				<li ng-repeat="item in items  track by item.id" console-output="{{$index}} item" ng-bind="item.name"></li>
+				<input type="button" value="Insert" ng-click="rebulidItems()"/>
+				
+			</ul>
+	</div>
+	
+</body>
+
+</html>
